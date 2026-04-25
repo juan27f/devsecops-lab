@@ -11,19 +11,19 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'py -m pip install -r requirements.txt'
+                bat '"C:\\Users\\juanf\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'py -m pytest'
+                bat '"C:\\Users\\juanf\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pytest'
             }
         }
 
         stage('Security Scan') {
             steps {
-                bat 'py -m bandit -r . || exit 0'
+                bat '"C:\\Users\\juanf\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m bandit -r . || exit 0'
             }
         }
 
